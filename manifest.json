@@ -1,0 +1,11 @@
+{
+  "domain": "chmi_measured_data",
+  "name": "CHMI Measured Data",
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "https://www.chmi.cz/",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "0.3.0"
+}

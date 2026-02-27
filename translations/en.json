@@ -1,0 +1,158 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "CHMI measured data station",
+        "description": "Paste a CHMI station URL, choose the station type (groundwater, surface water, air quality, meteorological), and choose the update mode.",
+        "data": {
+          "station_url": "CHMI station URL",
+          "name": "Name (optional)",
+          "station_family": "Station type",
+          "update_mode": "Update mode"
+        },
+        "data_description": {
+          "station_family": "Choose whether the URL points to a groundwater, surface-water, air-quality, or meteorological station.",
+          "update_mode": "Use 'daily_time' for one fetch per day at the selected local time, or 'interval' for periodic polling."
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure CHMI measured data station",
+        "description": "Change the CHMI station URL or station type (groundwater, surface water, air quality, meteorological). Update schedule remains in Options.",
+        "data": {
+          "station_url": "CHMI station URL",
+          "name": "Name (optional)",
+          "station_family": "Station type"
+        },
+        "data_description": {
+          "station_family": "Choose whether the URL points to a groundwater, surface-water, air-quality, or meteorological station."
+        }
+      },
+      "schedule_daily": {
+        "title": "Daily update time",
+        "description": "Choose the local time when CHMI data should be fetched each day.",
+        "data": {
+          "update_time": "Daily update time (HH:MM)"
+        }
+      },
+      "schedule_interval": {
+        "title": "Update interval",
+        "description": "Choose how often CHMI data should be fetched.",
+        "data": {
+          "scan_interval_minutes": "Update interval (minutes)"
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "Invalid CHMI station URL",
+      "no_snow_data": "Meteorological station does not provide snow data (snow entity is required)",
+      "url_type_mismatch": "CHMI URL type does not match selected station type",
+      "url_profile_mismatch": "Selected measurement type does not match the CHMI URL",
+      "profile_type_mismatch": "Selected measurement type does not match selected station type",
+      "invalid_station_family": "Invalid station type",
+      "invalid_measurement_profile": "Invalid measurement type",
+      "invalid_update_mode": "Invalid update mode",
+      "invalid_time": "Invalid time format (use HH:MM)",
+      "cannot_connect": "Cannot connect to CHMI or load station data",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "This station is already configured"
+    }
+  },
+  "options": {
+    "error": {
+      "invalid_url": "Invalid CHMI station URL",
+      "url_profile_mismatch": "Selected station type does not match the CHMI URL",
+      "cannot_connect": "Cannot connect to CHMI or load station data",
+      "unknown": "Unexpected error",
+      "invalid_time": "Invalid time format (use HH:MM)",
+      "already_configured": "This station is already configured"
+    },
+    "step": {
+      "init": {
+        "title": "CHMI measured data options",
+        "data": {
+          "station_url": "CHMI station URL",
+          "update_mode": "Update mode"
+        },
+        "data_description": {
+          "station_url": "You can change the CHMI station URL here (the station type of this integration stays the same).",
+          "update_mode": "Choose whether data are fetched once per day at a fixed local time, or periodically in minute intervals."
+        }
+      },
+      "daily_time": {
+        "title": "Daily update time",
+        "data": {
+          "update_time": "Daily update time (HH:MM)"
+        }
+      },
+      "interval": {
+        "title": "Update interval",
+        "data": {
+          "scan_interval_minutes": "Update interval (minutes)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+    "measurement": {
+      "name": "Measurement"
+    },
+    "groundwater_status": {
+      "name": "Groundwater status (CHMI criteria)"
+    },
+    "q5": {
+      "name": "Q5"
+    },
+      "q15": {
+        "name": "Q15"
+      },
+      "q25": {
+        "name": "Q25"
+      },
+      "q50": {
+        "name": "Q50"
+      },
+      "q75": {
+        "name": "Q75"
+      },
+      "q85": {
+        "name": "Q85"
+      },
+      "q95": {
+        "name": "Q95"
+      },
+      "surface_flow": {
+        "name": "Flow"
+      },
+      "surface_level": {
+        "name": "Water level"
+      },
+      "water_temperature": {
+        "name": "Water temperature"
+      },
+      "surface_status": {
+        "name": "SPA / drought status"
+      },
+      "spa_1_limit": {
+        "name": "SPA 1 limit"
+      },
+      "spa_2_limit": {
+        "name": "SPA 2 limit"
+      },
+      "spa_3_limit": {
+        "name": "SPA 3 limit"
+      },
+      "spa_4_limit": {
+        "name": "SPA 4 limit"
+      },
+      "sucho_limit": {
+        "name": "Drought limit"
+      },
+      "last_measurement": {
+        "name": "Last measurement"
+      }
+    }
+  }
+}

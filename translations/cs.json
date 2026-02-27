@@ -1,0 +1,158 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Stanice CHMI Measured Data",
+        "description": "Vlozte URL stanice CHMI, vyberte typ stanice (podzemni vody, povrchove vody, kvalita ovzdusi, meteorologicke) a zvolte rezim aktualizace.",
+        "data": {
+          "station_url": "URL stanice CHMI",
+          "name": "Nazev (volitelne)",
+          "station_family": "Typ stanice",
+          "update_mode": "Rezim aktualizace"
+        },
+        "data_description": {
+          "station_family": "Vyberte, zda URL odkazuje na stanici podzemnich vod, povrchovych vod, kvality ovzdusi nebo meteorologickou stanici.",
+          "update_mode": "Pouzijte 'daily_time' pro 1 nacitani denne v nastaveny cas, nebo 'interval' pro periodicke nacitani."
+        }
+      },
+      "reconfigure": {
+        "title": "Upravit stanici CHMI Measured Data",
+        "description": "Zmente URL stanice CHMI nebo typ stanice (podzemni vody, povrchove vody, kvalita ovzdusi, meteorologicke). Casovani nacitani zustava v Moznostech integrace.",
+        "data": {
+          "station_url": "URL stanice CHMI",
+          "name": "Nazev (volitelne)",
+          "station_family": "Typ stanice"
+        },
+        "data_description": {
+          "station_family": "Vyberte, zda URL odkazuje na stanici podzemnich vod, povrchovych vod, kvality ovzdusi nebo meteorologickou stanici."
+        }
+      },
+      "schedule_daily": {
+        "title": "Cas denni aktualizace",
+        "description": "Zadejte lokalni cas, kdy se maji data z CHMI nacitat kazdy den.",
+        "data": {
+          "update_time": "Cas denni aktualizace (HH:MM)"
+        }
+      },
+      "schedule_interval": {
+        "title": "Interval aktualizace",
+        "description": "Zadejte, jak casto se maji data z CHMI nacitat.",
+        "data": {
+          "scan_interval_minutes": "Interval aktualizace (minuty)"
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "Neplatne URL stanice CHMI",
+      "no_snow_data": "Meteorologicka stanice neposkytuje data o snehu (entita sneh je povinna)",
+      "url_type_mismatch": "Typ zadane URL stanice CHMI neodpovida zvolenemu typu stanice",
+      "url_profile_mismatch": "Zvoleny typ mereni neodpovida zadane URL stanice CHMI",
+      "profile_type_mismatch": "Zvoleny typ mereni neodpovida zvolenemu typu stanice",
+      "invalid_station_family": "Neplatny typ stanice",
+      "invalid_measurement_profile": "Neplatny typ mereni",
+      "invalid_update_mode": "Neplatny rezim aktualizace",
+      "invalid_time": "Neplatny cas (pouzijte HH:MM)",
+      "cannot_connect": "Nepodarilo se nacist data stanice z CHMI",
+      "unknown": "Neocekavana chyba"
+    },
+    "abort": {
+      "already_configured": "Tato stanice je uz nastavena"
+    }
+  },
+  "options": {
+    "error": {
+      "invalid_url": "Neplatna URL stanice CHMI",
+      "url_profile_mismatch": "Vybrany typ stanice neodpovida URL CHMI",
+      "cannot_connect": "Nelze se pripojit k CHMI nebo nacist data stanice",
+      "unknown": "Neocekavana chyba",
+      "invalid_time": "Neplatny format casu (pouzije HH:MM)",
+      "already_configured": "Tato stanice je jiz nastavena"
+    },
+    "step": {
+      "init": {
+        "title": "Moznosti CHMI Measured Data",
+        "data": {
+          "station_url": "URL stanice CHMI",
+          "update_mode": "Rezim aktualizace"
+        },
+        "data_description": {
+          "station_url": "Zde muzete zmenit URL stanice CHMI (typ stanice teto integrace zustava stejny).",
+          "update_mode": "Vyberte nacitani 1x denne v pevny cas, nebo periodicke nacitani v minutovem intervalu."
+        }
+      },
+      "daily_time": {
+        "title": "Cas denni aktualizace",
+        "data": {
+          "update_time": "Cas denni aktualizace (HH:MM)"
+        }
+      },
+      "interval": {
+        "title": "Interval aktualizace",
+        "data": {
+          "scan_interval_minutes": "Interval aktualizace (minuty)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+    "measurement": {
+      "name": "Mereni"
+    },
+    "groundwater_status": {
+      "name": "Stav podzemni vody (CHMI)"
+    },
+    "q5": {
+      "name": "Q5"
+    },
+      "q15": {
+        "name": "Q15"
+      },
+      "q25": {
+        "name": "Q25"
+      },
+      "q50": {
+        "name": "Q50"
+      },
+      "q75": {
+        "name": "Q75"
+      },
+      "q85": {
+        "name": "Q85"
+      },
+      "q95": {
+        "name": "Q95"
+      },
+      "surface_flow": {
+        "name": "Prutok"
+      },
+      "surface_level": {
+        "name": "Vyska hladiny"
+      },
+      "water_temperature": {
+        "name": "Teplota vody"
+      },
+      "surface_status": {
+        "name": "Stav SPA / sucho"
+      },
+      "spa_1_limit": {
+        "name": "Limit 1. SPA"
+      },
+      "spa_2_limit": {
+        "name": "Limit 2. SPA"
+      },
+      "spa_3_limit": {
+        "name": "Limit 3. SPA"
+      },
+      "spa_4_limit": {
+        "name": "Limit 4. SPA"
+      },
+      "sucho_limit": {
+        "name": "Limit sucha"
+      },
+      "last_measurement": {
+        "name": "Posledni mereni"
+      }
+    }
+  }
+}

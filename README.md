@@ -23,6 +23,16 @@ Custom Home Assistant integration for CHMI measured stations (groundwater, surfa
 - Automatic sensor set by selected station type
 - Rich sensor attributes (metadata, timestamps, station details, forecast/history where available)
 
+## Screenshots
+
+| Groundwater | Surface Water (Flow) |
+| --- | --- |
+| ![Groundwater](./screenshots/podzemni_voda.png) | ![Surface Water Flow](./screenshots/prutok.png) |
+
+| Air Quality | Meteorological |
+| --- | --- |
+| ![Air Quality](./screenshots/ovzdusi.png) | ![Meteorological](./screenshots/meteo.png) |
+
 ## Installation (local)
 
 1. Copy `custom_components/chmi_measured_data` into your Home Assistant config directory under `custom_components/`.
